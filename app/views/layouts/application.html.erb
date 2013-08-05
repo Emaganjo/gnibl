@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
   <script type="text/javascript">function overlay() {
 	el = document.getElementById("overlay");
 	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
@@ -14,23 +14,13 @@
   
 
 
-<script>
-	$(document).ready(function() {
-	$("pic").on('click',function() {
-		$("overlay").fadeIn('slow');
-	});
-	});
-</script>
-
-
-
 </head>
 
 	<!--<div id="topnavbar">
 		<h1 id="heading">Holistic design<h1/>
-	</div>-->
+	</div>
 
-	<!--<div id="box">
+	<div id="box">
 	</div>-->
 
 <body>
@@ -45,10 +35,6 @@
 	</div>
 </div>
 	
-
-
-
-
 	<!--<div id="pic">
 		<a href="#" onclick='overlay()'><img src="http://www.intellimusica.com/wp-content/uploads/2013/04/Inception-Top-Wallpaper-Sohan-Surag.jpg"/></a>
 	</div>]
@@ -64,6 +50,8 @@
 	</div>-->
 
 	<div class="container">
+	<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 	<%=yield%>
 </div>
 
